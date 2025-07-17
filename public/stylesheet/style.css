@@ -1,27 +1,32 @@
-body{
+body {
     background-color: cornsilk;
+    text-align: center;
 }
 
-form{
+/* form {
     display: flex;
     flex-direction: column;
-}   
-.listing-img{
-  width: 20vw;
+    width: 90vw;
+} */
+
+.listing-img {
+    width: 50vw;
 }
-li{
+ul {
+    margin: 0px;
+    padding: 0px
+}
+
+li {
     list-style: none;
     text-align: center;
 }
-ul{
-    margin: 0px;
-    padding: 0px;
-}
-.action{
+
+.actions {
     display: flex;
     flex-direction: column;
-
 }
-#edit-button{
-    width: 90vs
+
+#edit-button {
+    width: 90vw;
 }
