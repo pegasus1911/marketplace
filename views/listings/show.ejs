@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <title><%= foundListings.title%></title>
+</head>
+<body>
+     <h2><%= foundListings.title%></h2>
+        <p><%= foundListings.description%></p>
+        <p>Seller:<%= foundListings.seller.username%></p>
+        <p><strong><%= foundListings.price%> BHD</strong></p>
+        <img src="<%=foundListings.image%>" class="listing-img" alt="Image of <%=foundListings.title%>"/>
+        
+        <% if(foundListings.seller._id.equals(user._id)){%>
+            <div class="actions">
+                <form action="/listings/<%=foundListings._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+                    <a href="/listings/<%=foundListings._id%>/edit">
+                        <button  id="edit-button">edit</button>
+                    </a>
+                </div>
+        <%}%>
+        
+</body>
+</html>
